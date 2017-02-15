@@ -1,0 +1,31 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CustomControlWithType">
+
+    <Style TargetType="local:MyMap" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:MyMap">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Latitude:" Grid.Row="0" Grid.Column="0" />
+                        <TextBlock Text="{Binding Path=CenterPoint.Latitude, RelativeSource={RelativeSource Mode=TemplatedParent}}" Grid.Row="0" Grid.Column="1" />
+                        <TextBlock Text="Longitude:" Grid.Row="1" Grid.Column="0" />
+                        <TextBlock Text="{Binding Path=CenterPoint.Longitude, RelativeSource={RelativeSource Mode=TemplatedParent}}" Grid.Row="1" Grid.Column="1" />
+                        <TextBlock Text="Altitude:" Grid.Row="2" Grid.Column="0" />
+                        <TextBlock Text="{Binding Path=CenterPoint.Altitude, RelativeSource={RelativeSource Mode=TemplatedParent}}" Grid.Row="2" Grid.Column="1" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -5,9 +5,13 @@
     xmlns:local="using:TypeConverterSample"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:map="using:CustomControlWithType"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <map:MyMap MapTitle="Redmond, Washington, USA" CenterPoint="47.669444,-122.123889,13"/>
+        </StackPanel>
     </Grid>
 </Page>
